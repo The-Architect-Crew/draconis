@@ -11,7 +11,7 @@ end
 
 -- Get Craft Items --
 
-local ice_block = "default:ice"
+local ice_block = "blocks:ice"
 
 minetest.register_on_mods_loaded(function()
 	if minetest.registered_items[ice_block] then return end
@@ -1006,8 +1006,8 @@ minetest.register_alias_force("draconis:lectern", "draconis:log_scorched") -- We
 
 -- Get Craft Items --
 
-local gold_block = "default:goldblock"
-local steel_block = "default:steelblock"
+local gold_block = "variations:goldblock_big_tile"
+local steel_block = "variations:steelblock_big_tile"
 
 minetest.register_on_mods_loaded(function()
 	for name in pairs(minetest.registered_items) do
@@ -1078,7 +1078,7 @@ minetest.register_craft({
 	output = "draconis:draconic_steel_forge_ice",
 	recipe = {
 		{"draconis:stone_frozen", "draconis:stone_frozen", "draconis:stone_frozen"},
-		{"draconis:stone_frozen", "default:furnace", "draconis:stone_frozen"},
+		{"draconis:stone_frozen", gold_block, "draconis:stone_frozen"},
 		{"draconis:stone_frozen", "draconis:stone_frozen", "draconis:stone_frozen"},
 	}
 })
@@ -1087,7 +1087,7 @@ minetest.register_craft({
 	output = "draconis:draconic_steel_forge_fire",
 	recipe = {
 		{"draconis:stone_scorched", "draconis:stone_scorched", "draconis:stone_scorched"},
-		{"draconis:stone_scorched", "default:furnace", "draconis:stone_scorched"},
+		{"draconis:stone_scorched", gold_block, "draconis:stone_scorched"},
 		{"draconis:stone_scorched", "draconis:stone_scorched", "draconis:stone_scorched"},
 	}
 })

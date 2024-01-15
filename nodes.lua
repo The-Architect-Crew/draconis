@@ -8,7 +8,7 @@ local random = math.random
 
 -- Get Craft Items --
 
-local steel_ingot = "default:steel_ingot"
+local steel_ingot = "blocks:steel_ingot"
 
 minetest.register_on_mods_loaded(function()
 	for name in pairs(minetest.registered_items) do
