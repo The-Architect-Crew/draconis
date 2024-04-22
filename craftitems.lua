@@ -1006,8 +1006,8 @@ minetest.register_alias_force("draconis:lectern", "draconis:log_scorched") -- We
 
 -- Get Craft Items --
 
-local gold_block = "variations:goldblock_big_tile"
-local steel_block = "variations:steelblock_big_tile"
+local gold_block = "variations:tile_big_goldblock"
+local steel_block = "variations:tile_big_steelblock"
 
 minetest.register_on_mods_loaded(function()
 	for name in pairs(minetest.registered_items) do

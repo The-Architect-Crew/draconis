@@ -57,7 +57,7 @@ draconis.global_nodes = {}
 
 draconis.global_nodes["flame"] = "blocks:fire"
 draconis.global_nodes["ice"] = "blocks:ice"
-draconis.global_nodes["steel_blockj"] = "variations:steelblock_big_tile"
+draconis.global_nodes["steel_blockj"] = "variations:tile_big_steelblock"
 
 minetest.register_on_mods_loaded(function()
     for name, def in pairs(minetest.registered_nodes) do

@@ -31,12 +31,12 @@ local c_air = minetest.get_content_id("air")
 local c_ignore = minetest.get_content_id("ignore")
 
 local c_gold = c_air
-if minetest.registered_nodes["variations:goldblock_big_tile"] then
-	c_gold = minetest.get_content_id("variations:goldblock_big_tile")
+if minetest.registered_nodes["variations:tile_big_goldblock"] then
+	c_gold = minetest.get_content_id("variations:tile_big_goldblock")
 end
 local c_steel = c_air
-if minetest.registered_nodes["variations:steelblock_big_tile"] then
-	c_steel = minetest.get_content_id("variations:steelblock_big_tile")
+if minetest.registered_nodes["variations:tile_big_steelblock"] then
+	c_steel = minetest.get_content_id("variations:tile_big_steelblock")
 end
 
 local np_nest = {
