@@ -212,6 +212,7 @@ local spawn_rate = tonumber(minetest.settings:get("wyvern_jungle_spawn_rate")) o
 
 creatura.register_mob_spawn("draconis:jungle_wyvern", {
 	chance = spawn_rate,
+	distance = tonumber(minetest.settings:get("origin_spawn_distance")) or 10000,
 	min_group = 1,
 	max_group = 2,
 	biomes = biomes,
