@@ -142,6 +142,7 @@ local spawn_rate = tonumber(minetest.settings:get("simple_spawn_rate")) or 80000
 if simple_spawning then
     creatura.register_mob_spawn("draconis:ice_dragon", {
         chance = spawn_rate,
+        distance = tonumber(minetest.settings:get("origin_spawn_distance")) or 10000,
         min_group = 1,
         max_group = 1,
         biomes = draconis.cold_biomes,
@@ -149,6 +150,7 @@ if simple_spawning then
     })
     creatura.register_mob_spawn("draconis:fire_dragon", {
         chance = spawn_rate,
+        distance = tonumber(minetest.settings:get("origin_spawn_distance")) or 10000,
         min_group = 1,
         max_group = 1,
         biomes = draconis.warm_biomes,

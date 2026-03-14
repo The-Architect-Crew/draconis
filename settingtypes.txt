@@ -28,5 +28,6 @@ register_stairs (Register Stairs) bool true
 #    Chance (by percentage of 100) for a special color to occur on one of Dragons potential color regions
 unique_color_chance (Unique Color Chance) int 65
 
-
+#   Strength of the DragonRepulsionField(tm) in spawn
+origin_spawn_distance (Spawn Distance) int 5000
 

@@ -14,6 +14,8 @@ local nest_spawn_rate = tonumber(minetest.settings:get("nest_spawn_rate")) or 64
 
 local cavern_spawn_rate = tonumber(minetest.settings:get("cavern_spawn_rate")) or 64
 
+local spawn_distance = tonumber(minetest.settings:get("origin_spawn_distance")) or 10000
+
 ---------------------
 -- Local Variables --
 ---------------------
@@ -567,6 +569,10 @@ minetest.register_on_generated(function(minp, maxp)
 	local center_z = math.floor((min_z + max_z) / 2)
 
 	local pos = {x = center_x, y = center_y, z = center_z}
+
+	if math.sqrt(pos.x*pos.x + pos.y*pos.y) < spawn_distance then
+		return
+	end
 
 	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 	local area = VoxelArea:new{MinEdge = emin, MaxEdge = emax}
